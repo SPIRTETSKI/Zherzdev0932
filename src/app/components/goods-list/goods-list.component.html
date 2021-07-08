@@ -1,7 +1,5 @@
-<button class="btn btn-primary float-end" (click)='linkToItem()'>
-        Новый
-      </button>
-<h1 style="margin-top:20px ;">Журнал товаров</h1>
+<h1 style="margin-top:20px ;">
+    Журнал товаров</h1>
 <h5>Сортировать по:</h5>
 <div style="display:inline">По категории:
     <form [formGroup]="goodsForm" style="display: inline;">
@@ -11,10 +9,10 @@
     </form>
 </div> <br>
 <input type="checkbox" id="first" [(ngModel)]="quantityCheck"> <label for="first" style="color: Black;"> В наличии</label><br/>
-
 <br>
 <button (click)="ApplyFilter()" class="btn btn-success">Применить</button> <br> <br>
 <button (click)="Reset()" class="btn btn-warning">Сбросить</button>
+
 <div class="table-responsive">
     <table class="table table-bordered" id="table-id" style="margin-top: 80px">
         <thead>
@@ -47,4 +45,7 @@
             </tr>
         </tbody>
     </table>
+    <button class="btn btn-primary float-end" (click)='linkToItem()'>
+        Новый
+      </button>
 </div>

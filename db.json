@@ -2,33 +2,53 @@
   "goods": [
     {
       "id": 1,
-      "name": "chairs",
+      "name": "Стулья",
       "article": 123,
-      "price": "100",
-      "manufacturer": "china",
+      "price": "1000",
+      "manufacturer": "Китай",
       "category": 1,
       "weight": 80,
-      "quantity": 3
+      "quantity": 2
     },
     {
-      "name": "KIng of the Jungle",
+      "name": "Король лев",
       "article": "7355608",
       "price": "200",
-      "manufacturer": "maker's mark",
+      "manufacturer": "ООО \"Книжки\"",
       "category": 3,
       "weight": "2",
-      "quantity": 2,
+      "quantity": 3,
       "id": 2
     },
     {
-      "name": "Chief's mark",
+      "name": "Сказки на ночь",
       "article": "1337",
       "price": "250",
-      "manufacturer": "serenity",
+      "manufacturer": "ИП \"Читатель\"",
       "category": 3,
       "weight": "13",
       "quantity": 9,
       "id": 3
+    },
+    {
+      "name": "Нокиа-3310",
+      "article": "133",
+      "price": "7500",
+      "manufacturer": "НОКИА",
+      "category": 4,
+      "weight": "1",
+      "quantity": "3",
+      "id": 4
+    },
+    {
+      "name": "Посудомойка",
+      "article": "542",
+      "price": "27000",
+      "manufacturer": "Bosch",
+      "category": 2,
+      "weight": "13",
+      "quantity": "0",
+      "id": 5
     }
   ],
   "categories": [
