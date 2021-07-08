@@ -23,7 +23,7 @@ export class GoodsListComponent implements OnInit {
     const controls = {
       name: [null, [Validators.required, Validators.maxLength(100)]],
       article: [null, [Validators.required, Validators.maxLength(100)]],
-      price: [null, [Validators.maxLength(100)]],
+      price: [null, [Validators.required, Validators.maxLength(100)]],
       manufacturer: [null, [Validators.maxLength(100)]],
       category: [null, [Validators.required, Validators.maxLength(100)]],
       weight: [null, [Validators.required, Validators.maxLength(100)]],
@@ -85,10 +85,10 @@ export class GoodsListComponent implements OnInit {
       this.getGoods();
     }
   }
-  getQuantity(id: number) {
-    let good = this.goods?.find(x => x.id == id);
-    return (good?.name);
-  }
+  // getQuantity(id: number) {
+  //   let good = this.goods?.find(x => x.id == id);
+  //   return (good?.name);
+  // }
   sortByQuantity(){
     if(this.StateCheck==false)
     {
