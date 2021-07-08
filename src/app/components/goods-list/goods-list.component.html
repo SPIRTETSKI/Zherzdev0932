@@ -15,34 +15,36 @@
 <br>
 <button (click)="ApplyFilter()" class="btn btn-success">Применить</button> <br> <br>
 <button (click)="Reset()" class="btn btn-warning">Сбросить</button>
-<table class="table table-bordered" id="table-id" style="margin-top: 80px">
-    <thead>
-        <tr>
-            <th scope="col" style="width: 50px; text-align: center;">id</th>
-            <th scope="col">Название</th>
-            <th scope="col">Артикул</th>
-            <th scope="col" (click)="sortByPrice()">Цена</th>
-            <th scope="col">Производитель</th>
-            <th scope="col">Вес</th>
-            <th scope="col">Категория</th>
-            <th scope="col" (click)="sortByQuantity()">Количество</th>
-            <th scope="col">Операция</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let good of goods">
-            <th scope="row" style="text-align: center;">{{good.id}}</th>
-            <td>{{good.name}}</td>
-            <td>{{good.article}}</td>
-            <td>{{good.price}}</td>
-            <td>{{good.manufacturer}}</td>
-            <td>{{good.weight}}</td>
-            <td>{{getCategoryName(good.category)}}</td>
-            <td>{{(good.quantity)}}
-                <button (click)="addQuantity(good.id)"> + </button>
-                <button (click)="reduceQuantity(good.id)"> - </button>
-            </td>
-            <td style="background-color: yellow; text-align: center;" (click)="linkToItem(good.id)">Редактировать</td>
-        </tr>
-    </tbody>
-</table>
+<div class="table-responsive">
+    <table class="table table-bordered" id="table-id" style="margin-top: 80px">
+        <thead>
+            <tr>
+                <th scope="col" style="width: 50px; text-align: center;">id</th>
+                <th scope="col">Название</th>
+                <th scope="col">Артикул</th>
+                <th scope="col" (click)="sortByPrice()">Цена</th>
+                <th scope="col">Производитель</th>
+                <th scope="col">Вес</th>
+                <th scope="col">Категория</th>
+                <th scope="col" (click)="sortByQuantity()" style="text-align: center;">Количество</th>
+                <th scope="col">Операция</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let good of goods">
+                <th scope="row" style="text-align: center;">{{good.id}}</th>
+                <td>{{good.name}}</td>
+                <td>{{good.article}}</td>
+                <td>{{good.price}}</td>
+                <td>{{good.manufacturer}}</td>
+                <td>{{good.weight}}</td>
+                <td>{{getCategoryName(good.category)}}</td>
+                <td style="text-align: center;">
+                    <button (click)="reduceQuantity(good.id)" class="btn btn-danger">-</button> {{(good.quantity)}}
+                    <button (click)="addQuantity(good.id)" class="btn btn-success">+</button>
+                </td>
+                <td style="background-color: yellow; text-align: center;" (click)="linkToItem(good.id)">Редактировать</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

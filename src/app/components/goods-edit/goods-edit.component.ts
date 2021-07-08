@@ -31,7 +31,7 @@ export class GoodsEditComponent implements OnInit {
         name: [null, [Validators.required, Validators.maxLength(100)]],
         article: [null, [Validators.required, Validators.maxLength(100), Validators.pattern('[0-9]+$')]],
         price: [null, [Validators.required, Validators.maxLength(100), Validators.pattern('[0-9]+$')]],
-        manufacturer: [null, [Validators.required, Validators.maxLength(100)]],
+        manufacturer: [null, [ Validators.maxLength(100)]],
         category: [null, [Validators.required, Validators.maxLength(100)]],
         weight: [null, [Validators.required, Validators.maxLength(100), Validators.pattern('[0-9]+$')]],
         quantity: [null, [Validators.required, Validators.maxLength(100),  Validators.pattern('[0-9]+$')]]      
