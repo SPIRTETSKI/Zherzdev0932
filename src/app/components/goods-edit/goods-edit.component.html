@@ -1,0 +1,43 @@
+<form class="top" [formGroup]="goodsForm" (ngSubmit)="onAddGood()">
+    <h2 class="element" style="width: 450px">Товар</h2>
+    <p>
+        Имя:
+        <input placeholder="Имя" formControlName="name" [ngClass]="{'has-error': goodsForm.get('name')?.invalid &&
+            goodsForm.get('name')?.touched}">
+    </p>
+    <p>
+        Артикул:
+        <input placeholder="Артикул" formControlName="article" [ngClass]="{'has-error': goodsForm.get('article')?.invalid &&
+            goodsForm.get('article')?.touched}">
+    </p>
+    <p>
+        Цена:
+        <input placeholder="Цена" formControlName="price" [ngClass]="{'has-error': goodsForm.get('price')?.invalid &&
+            goodsForm.get('price')?.touched}">
+    </p>
+    <p>
+        Производитель:
+        <input placeholder="Производитель" formControlName="manufacturer" [ngClass]="{'has-error': goodsForm.get('manufacturer')?.invalid &&
+            goodsForm.get('manufacturer')?.touched}">
+    </p>
+    <p>
+        Вес:
+        <input placeholder="Вес" formControlName="weight" [ngClass]="{'has-error': goodsForm.get('weight')?.invalid &&
+            goodsForm.get('weight')?.touched}">
+    </p>
+    <p>
+        Количество:
+        <input placeholder="Количество" formControlName="quantity" [ngClass]="{'has-error': goodsForm.get('quantity')?.invalid &&
+            goodsForm.get('quantity')?.touched}">
+    </p>
+    <div>
+        Категория:
+        <select id="type" formControlName="category">
+                <option name="typename" *ngFor="let category of categories" [ngValue]='category.id' >{{category.name}}</option>
+              </select>
+    </div>
+    <br>
+    <input class="btn btn-success" style="width: 200px;" type="button" value="Сохранить заметку " [disabled]='goodsForm.invalid' (click)='onAddGood()'>
+    <br> <br>
+    <input class="btn btn-danger ml-3" style="width: 200px;" type="button" value="Удалить заметку " (click)="onDeleteGood()" *ngIf="id">
+</form>

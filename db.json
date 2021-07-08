@@ -1,0 +1,52 @@
+{
+  "goods": [
+    {
+      "id": 1,
+      "name": "chairs",
+      "article": 123,
+      "price": "100",
+      "manufacturer": "china",
+      "category": 1,
+      "weight": 80,
+      "quantity": 3
+    },
+    {
+      "name": "KIng of the Jungle",
+      "article": "7355608",
+      "price": "200",
+      "manufacturer": "maker's mark",
+      "category": 3,
+      "weight": "2",
+      "quantity": 3,
+      "id": 2
+    },
+    {
+      "name": "Chief's mark",
+      "article": "1337",
+      "price": "250",
+      "manufacturer": "serenity",
+      "category": 3,
+      "weight": "13",
+      "quantity": 9,
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "мебель"
+    },
+    {
+      "id": 2,
+      "name": "техника"
+    },
+    {
+      "id": 3,
+      "name": "книги"
+    },
+    {
+      "id": 4,
+      "name": "телефоны"
+    }
+  ]
+}
